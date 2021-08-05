@@ -240,7 +240,7 @@ section {
     font-size: 1rem;
 }
 
-.header .links li a {
+.header .links li:not(:last-child) a {
     color: inherit;
     position: relative;
     transition: color .5s;
@@ -276,7 +276,7 @@ section {
     margin-right: 20px;
 }
 
-.close-btn {
+header .links .close-btn {
     display: none;
 }
 
@@ -319,11 +319,11 @@ section {
         transform: translateY(-50%);
         left: 0;
     }
-    .close-btn {
+    .links .close-btn {
+        display: block;
         position: absolute;
         top: 0;
         right: 20px;
-        display: block;
         cursor: pointer;
         margin-top: 20px;
     }
@@ -792,7 +792,7 @@ section {
 
 @media screen and (min-width:991px) {
     .work .project .image:hover {
-        height: 400px;
+        height: 100%;
     }
 }
 
