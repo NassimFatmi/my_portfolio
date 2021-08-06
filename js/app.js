@@ -109,3 +109,9 @@ sections.forEach(section => {
     }, { threshold: 1.0 });
     observer.observe(section);
 });
+
+// landding see my work button
+document.querySelector('.landing .see-more').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.work').scrollIntoView({ behavior: 'smooth' });
+});

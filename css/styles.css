@@ -319,15 +319,16 @@ header .links .close-btn {
         transform: translateY(-50%);
         left: 0;
     }
-    .links .close-btn {
+    .header .links .close-btn {
         display: block;
         position: absolute;
         top: 0;
         right: 20px;
         cursor: pointer;
         margin-top: 20px;
+        z-index: 2;
     }
-    .close-btn i {
+    .header .links .close-btn i {
         font-size: 2rem;
     }
 }
@@ -751,6 +752,15 @@ header .links .close-btn {
     padding-bottom: 50px;
 }
 
+.work .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.work .text {}
+
 .work h2 {
     position: relative;
 }
@@ -765,8 +775,15 @@ header .links .close-btn {
     background-color: #f9f9f9a8;
 }
 
+@media screen and (max-width:767px) {
+    .work .text h2 {
+        font-size: 2rem;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+}
+
 .work .work-list {
-    margin-top: 60px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -870,8 +887,7 @@ header .links .close-btn {
 
 .work .see-more {
     color: var(--main-color);
-    padding: 20px;
-    margin-top: 20px;
+    padding: 10px;
     position: relative;
     z-index: 2;
 }
@@ -903,7 +919,6 @@ header .links .close-btn {
 }
 
 .contact form {
-    margin-top: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
